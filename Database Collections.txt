@@ -1,0 +1,42 @@
+Database Collections:
+
+1. Users
+2. Tasks
+3. Profiles
+
+Tasks Collection:
+- This collection stores the tasks added by users.
+
+CRUD Operations:
+
+1. Create (Add):
+   - Functionality: Allow users to add new tasks to their list.
+   - Fields:
+     - Task Name
+   - Example Function:addTask(task: Task)
+
+2. Read (Retrieve):
+   - Functionality: Retrieve tasks from the database.
+   - Example Functions:
+     - getAllTasks(): List<Task>
+     - getTaskById(taskId: String): Task
+     - getTasksByUserId(userId: String): List<Task>
+
+3. Update (Modify):
+   - Functionality: Allow users to update existing tasks.
+   - Example Function: updateTask(taskId: String, updatedTask: Task)
+
+4. Delete:
+   - Functionality: Allow users to delete tasks from their list.
+   - Example Function: deleteTask(taskId: String)
+
+Users Collection:
+- This collection stores user authentication information and basic profile details.
+- Fields:
+  - Username
+  - Email
+  - Authentication Provider (e.g., Google)
+  - Completed Tasks (Array or List containing task IDs for tasks completed by the user)
+
+Profiles Collection:
+- This collection stores additional profile information beyond basic authentication, such as email and you can logout and delete account.
